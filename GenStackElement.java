@@ -7,5 +7,13 @@ public class GenStackElement<T extends Number> {
 		this.value = value;
 		this.nextElement = null;
 	}
+	
+	public T getValue() {
+		return value;
+	}
+	
+	public GenStackElement getNext() {
+		return nextElement;
+	}
 
 }
