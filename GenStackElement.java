@@ -2,7 +2,7 @@ public class GenStackElement<T extends Number> {
 
 	private T value;
 	private GenStackElement nextElement;
-	private int index = 0;
+	private int index = 1;
 	
 	public GenStackElement (T value) {
 		this.value = value;
@@ -11,6 +11,10 @@ public class GenStackElement<T extends Number> {
 	
 	public T getValue() {
 		return value;
+	}
+	
+	public int getSize() {
+		return index;
 	}
 	
 	public GenStackElement getNext() {
@@ -43,10 +47,10 @@ public class GenStackElement<T extends Number> {
 		}
 	}
 	
-	public void printList() {
+	public void printStack() {
 		if (this.nextElement != null) {
 			System.out.println(this.getValue());
-			this.getNext().printList();
+			this.getNext().printStack();
 		} else {
 			System.out.println(this.getValue());
 		}
