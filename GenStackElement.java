@@ -42,5 +42,14 @@ public class GenStackElement<T extends Number> {
 			return false;
 		}
 	}
+	
+	public void printList() {
+		if (this.nextElement != null) {
+			System.out.println(this.getValue());
+			this.getNext().printList();
+		} else {
+			System.out.println(this.getValue());
+		}
+	}
 
 }
